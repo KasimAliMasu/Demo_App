@@ -1,6 +1,7 @@
 import 'package:demo_app/image_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:easy_localization/easy_localization.dart';
+import 'package:get/get.dart';
+// import 'package:easy_localization/easy_localization.dart';
 
 class ShoppingPage extends StatelessWidget {
   const ShoppingPage({super.key});
@@ -9,43 +10,43 @@ class ShoppingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Product> products = [
       Product(
-        name: 'oversizedTShirt'.tr(),
+        name: 'oversizedTShirt'.tr,
         price: 339.99,
         imageUrl:
             'https://cdn.shopify.com/s/files/1/0566/0839/1368/files/2_68870f4c-e1c3-405e-96cc-9d4f2b1c604f.png?v=1713008021&width=500',
       ),
       Product(
-        name: 'oversizedTShirt'.tr(),
+        name: 'oversizedTShirt'.tr,
         price: 589.99,
         imageUrl:
             'https://overlaysnow.com/cdn/shop/files/BeigeChampionPhoto_4.jpg?v=1713004590&width=1000',
       ),
       Product(
-        name: 'clothingForMen'.tr(),
+        name: 'clothingForMen'.tr,
         price: 3219.99,
         imageUrl:
             'https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/c/b/g/l-aa-puff02-antayul-apparel-original-imagxty3xymcyrz4.jpeg?q=70&crop=false',
       ),
       Product(
-        name: 'oversizedTShirt'.tr(),
+        name: 'oversizedTShirt'.tr,
         price: 3219.99,
         imageUrl:
             'https://www.fugazee.com/cdn/shop/files/11-09-2315027.jpg?v=1699749767&width=640',
       ),
       Product(
-        name: 'oversizedTShirt'.tr(),
+        name: 'oversizedTShirt'.tr,
         price: 3319.99,
         imageUrl:
             'https://overlaysnow.com/cdn/shop/files/OVERLAYS1029.jpg?v=1718355268&width=1000',
       ),
       Product(
-        name: 'clothingForMen'.tr(),
+        name: 'clothingForMen'.tr,
         price: 919.99,
         imageUrl:
             'https://overlaysnow.com/cdn/shop/files/OVERLAYS068_bf8480c7-ff60-4fc1-8495-64107c63a8ca.jpg?v=1718988730&width=1300',
       ),
       Product(
-        name: 'clothingForMen'.tr(),
+        name: 'clothingForMen'.tr,
         price: 989.99,
         imageUrl:
             'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1710851907_9370993.jpg?format=webp&w=480&dpr=1.5',

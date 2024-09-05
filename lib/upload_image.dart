@@ -1,8 +1,9 @@
 import 'dart:io';
+import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:easy_localization/easy_localization.dart';
+// import 'package:easy_localization/easy_localization.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class UploadImageScreen extends StatefulWidget {
@@ -71,7 +72,7 @@ class _UploadImageScreenState extends State<UploadImageScreen> {
       inAsyncCall: showSpinner,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('uploadImage'.tr()),
+          title: Text('uploadImage'.tr),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -84,7 +85,7 @@ class _UploadImageScreenState extends State<UploadImageScreen> {
               child: Container(
                 child: image == null
                     ? Center(
-                        child: Text('pickImage'.tr()),
+                        child: Text('pickImage'.tr),
                       )
                     : Container(
                         child: Center(
@@ -110,7 +111,7 @@ class _UploadImageScreenState extends State<UploadImageScreen> {
                 width: 200,
                 color: Colors.green,
                 child: Center(
-                  child: Text('upload'.tr()),
+                  child: Text('upload'.tr),
                 ),
               ),
             )

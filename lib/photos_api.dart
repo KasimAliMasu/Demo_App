@@ -1,7 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:easy_localization/easy_localization.dart';
+// import 'package:easy_localization/easy_localization.dart';
 
 class PhotosApiPage extends StatefulWidget {
   const PhotosApiPage({super.key});
@@ -35,7 +36,7 @@ class _PhotosApiPageState extends State<PhotosApiPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('photosApi'.tr()),
+        title: Text('photosApi'.tr),
       ),
       body: Column(
         children: [
@@ -46,7 +47,7 @@ class _PhotosApiPageState extends State<PhotosApiPage> {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return Center(child: CircularProgressIndicator());
                 } else if (snapshot.hasError) {
-                  return Center(child: Text('error_loading_data'.tr()));
+                  return Center(child: Text('error_loading_data'.tr));
                 } else {
                   return ListView.builder(
                     itemCount: photosList.length,
@@ -58,7 +59,7 @@ class _PhotosApiPageState extends State<PhotosApiPage> {
                         ),
                         subtitle: Text(snapshot.data![index].title.toString()),
                         title: Text(
-                            '${'notes_id'.tr()}: ${snapshot.data![index].id}'),
+                            '${'notes_id'.tr}: ${snapshot.data![index].id}'),
                       );
                     },
                   );

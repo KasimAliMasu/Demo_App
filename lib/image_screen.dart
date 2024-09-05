@@ -1,6 +1,7 @@
-import 'package:easy_localization/easy_localization.dart';
+// import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_social_button/flutter_social_button.dart';
+import 'package:get/get.dart';
 import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -36,7 +37,7 @@ class _ImageScreenState extends State<ImageScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('goToImageUploadPage'.tr()),
+        title: Text('goToImageUploadPage'.tr),
         actions: [
           IconButton(
             onPressed: () {},
@@ -105,7 +106,7 @@ class _ImageScreenState extends State<ImageScreen> {
                     Row(
                       children: [
                         Text(
-                          'comfortableMaterial'.tr(),
+                          'comfortableMaterial'.tr,
                           style: const TextStyle(
                               fontSize: 15, fontWeight: FontWeight.w200),
                         ),
@@ -128,7 +129,7 @@ class _ImageScreenState extends State<ImageScreen> {
                     Row(
                       children: [
                         Text(
-                          'size'.tr(),
+                          'size'.tr,
                           style: const TextStyle(fontSize: 25),
                         ),
                       ],
@@ -164,35 +165,35 @@ class _ImageScreenState extends State<ImageScreen> {
                     Row(
                       children: [
                         Text(
-                          'productDetails'.tr(),
+                          'productDetails'.tr,
                           style: const TextStyle(fontSize: 25),
                         ),
                       ],
                     ),
                     const SizedBox(height: 10),
                     Text(
-                      'product_description'.tr(),
+                      'product_description'.tr,
                       style: const TextStyle(fontSize: 15),
                     ),
                     const SizedBox(height: 15),
                     Row(
                       children: [
                         Text(
-                          'product_care'.tr(),
+                          'product_care'.tr,
                           style: const TextStyle(fontSize: 25),
                         ),
                       ],
                     ),
                     const SizedBox(height: 10),
                     Text(
-                      'product_care_description'.tr(),
+                      'product_care_description'.tr,
                       style: const TextStyle(fontSize: 15),
                     ),
                     const SizedBox(height: 30),
                     Row(
                       children: [
                         Text(
-                          'contact_us'.tr(),
+                          'contact_us'.tr,
                           style: const TextStyle(fontSize: 25),
                         ),
                       ],
@@ -254,7 +255,7 @@ class _ImageScreenState extends State<ImageScreen> {
                   ),
                   onPressed: () {},
                   child: Text(
-                    'buy_this_product'.tr(),
+                    'buy_this_product'.tr,
                     style: const TextStyle(color: Colors.white),
                   ),
                 ),
@@ -265,7 +266,7 @@ class _ImageScreenState extends State<ImageScreen> {
                   ),
                   onPressed: () {},
                   child: Text(
-                    'add_to_cart'.tr(),
+                    'add_to_cart'.tr,
                     style: const TextStyle(color: Colors.white),
                   ),
                 ),

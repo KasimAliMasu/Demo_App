@@ -2,8 +2,9 @@ import 'dart:convert';
 
 import 'package:demo_app/model/user_model.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:easy_localization/easy_localization.dart';
+// import 'package:easy_localization/easy_localization.dart';
 
 class UsersApiPage extends StatefulWidget {
   const UsersApiPage({super.key});
@@ -35,7 +36,7 @@ class _UsersApiPageState extends State<UsersApiPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('usersApi'.tr()),
+        title: Text('usersApi'.tr),
       ),
       body: Column(
         children: [
@@ -55,19 +56,19 @@ class _UsersApiPageState extends State<UsersApiPage> {
                             child: Column(
                               children: [
                                 ReusableRow(
-                                    title: 'name'.tr(),
+                                    title: 'name'.tr,
                                     value:
                                         snapshot.data![index].name.toString()),
                                 ReusableRow(
-                                    title: 'username'.tr(),
+                                    title: 'username'.tr,
                                     value: snapshot.data![index].username
                                         .toString()),
                                 ReusableRow(
-                                    title: 'email'.tr(),
+                                    title: 'email'.tr,
                                     value:
                                         snapshot.data![index].email.toString()),
                                 ReusableRow(
-                                    title: 'address'.tr(),
+                                    title: 'address'.tr,
                                     value: snapshot
                                         .data![index].address!.geo!.lat
                                         .toString())

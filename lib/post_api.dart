@@ -1,8 +1,9 @@
 import 'package:demo_app/model/posts_model.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:easy_localization/easy_localization.dart';
+// import 'package:easy_localization/easy_localization.dart';
 
 // ignore: must_be_immutable
 class PostApiScreen extends StatelessWidget {
@@ -30,7 +31,7 @@ class PostApiScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('postApi'.tr()),
+        title: Text('postApi'.tr),
       ),
       body: Column(
         children: [
@@ -39,7 +40,7 @@ class PostApiScreen extends StatelessWidget {
               future: getPostApi(),
               builder: (context, snapshot) {
                 if (!snapshot.hasData) {
-                  return Text('loading'.tr());
+                  return Text('loading'.tr);
                 } else {
                   return ListView.builder(
                       itemCount: postList.length,
@@ -52,7 +53,7 @@ class PostApiScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'title'.tr(),
+                                  'title'.tr,
                                   style: const TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.bold),
@@ -65,7 +66,7 @@ class PostApiScreen extends StatelessWidget {
                                   height: 5,
                                 ),
                                 Text(
-                                  'description'.tr(),
+                                  'description'.tr,
                                   style: const TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.bold),

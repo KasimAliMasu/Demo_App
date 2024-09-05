@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:easy_localization/easy_localization.dart';
+import 'package:get/get.dart';
+// import 'package:easy_localization/easy_localization.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key, required this.title});
@@ -15,22 +16,22 @@ class _LoginPageState extends State<LoginPage> {
 
   String? _validateUsername(String? value) {
     if (value == null || value.trim().isEmpty) {
-      return 'usernameError'.tr();
+      return 'usernameError'.tr;
     }
 
     if (value.trim().split(' ').length > 2) {
-      return 'usernameSpaceError'.tr();
+      return 'usernameSpaceError'.tr;
     }
     return null;
   }
 
   String? _validatePassword(String? value) {
     if (value == null || value.trim().isEmpty) {
-      return 'passwordError'.tr();
+      return 'passwordError'.tr;
     }
 
     if (value.trim().split(' ').length > 1) {
-      return 'passwordSpaceError'.tr();
+      return 'passwordSpaceError'.tr;
     }
     return null;
   }
@@ -40,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text('loginPageTitle'.tr()),
+        title: Text('loginPageTitle'.tr),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -58,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 50),
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: 'usernameLabel'.tr(),
+                    labelText: 'usernameLabel'.tr,
                     border: const OutlineInputBorder(),
                   ),
                   validator: _validateUsername,
@@ -66,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 20),
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: 'passwordLabel'.tr(),
+                    labelText: 'passwordLabel'.tr,
                     border: const OutlineInputBorder(),
                   ),
                   obscureText: true,
@@ -79,14 +80,14 @@ class _LoginPageState extends State<LoginPage> {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text(
-                            'processingData'.tr(),
+                            'processingData'.tr,
                           ),
                         ),
                       );
                     }
                   },
                   child: Text(
-                    'loginButton'.tr(),
+                    'loginButton'.tr,
                   ),
                 ),
               ],

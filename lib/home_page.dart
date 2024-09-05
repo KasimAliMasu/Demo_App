@@ -1,12 +1,15 @@
 import 'package:demo_app/login_page.dart';
-import 'package:demo_app/main.dart';
+// import 'package:demo_app/main.dart';
+
+// import 'package:demo_app/main.dart';
 import 'package:demo_app/photos_api.dart';
 import 'package:demo_app/post_api.dart';
 import 'package:demo_app/shopping_page.dart';
 import 'package:demo_app/upload_image.dart';
 import 'package:demo_app/users_api.dart';
 import 'package:flutter/material.dart';
-import 'package:easy_localization/easy_localization.dart';
+// import 'package:easy_localization/easy_localization.dart';
+import 'package:get/get.dart';
 
 class HomePageScreen extends StatefulWidget {
   const HomePageScreen({super.key, required this.title});
@@ -23,7 +26,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text('helloWorld'.tr()),
+        title: Text('helloWorld'.tr),
         actions: [
           IconButton(
             onPressed: () {
@@ -47,12 +50,12 @@ class _HomePageScreenState extends State<HomePageScreen> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => LoginPage(
-                      title: 'loginPageTitle'.tr(),
+                      title: 'loginPageTitle'.tr,
                     ),
                   ),
                 );
               },
-              child: Text('loginPageTitle'.tr()),
+              child: Text('loginPageTitle'.tr),
             ),
           ),
           Center(
@@ -65,7 +68,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                   ),
                 );
               },
-              child: Text('goToPostApiPage'.tr()),
+              child: Text('goToPostApiPage'.tr),
             ),
           ),
           Center(
@@ -78,7 +81,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                   ),
                 );
               },
-              child: Text('goToPhotosApiPage'.tr()),
+              child: Text('goToPhotosApiPage'.tr),
             ),
           ),
           Center(
@@ -91,7 +94,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                   ),
                 );
               },
-              child: Text('goToUsersApiPage'.tr()),
+              child: Text('goToUsersApiPage'.tr),
             ),
           ),
           Center(
@@ -104,7 +107,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                   ),
                 );
               },
-              child: Text('goToImageUploadPage'.tr()),
+              child: Text('goToImageUploadPage'.tr),
             ),
           ),
           Center(
@@ -117,7 +120,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                   ),
                 );
               },
-              child: Text('goToShoppingPage'.tr()),
+              child: Text('goToShoppingPage'.tr),
             ),
           ),
         ],
@@ -130,35 +133,35 @@ void _showLanguageSelectionDialog(BuildContext context) {
   showDialog(
     context: context,
     builder: (context) => AlertDialog(
-      title: Text('selectLanguage'.tr()),
+      title: Text('selectLanguage'.tr),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           ListTile(
             title: const Text('English'),
             onTap: () {
-              MyApp.setLocale(context, const Locale('en'));
+              Get.updateLocale(const Locale('en', 'US'));
               Navigator.of(context).pop();
             },
           ),
           ListTile(
             title: const Text('Hindi'),
             onTap: () {
-              MyApp.setLocale(context, const Locale('hi'));
+              Get.updateLocale(const Locale('hi', 'IN'));
               Navigator.of(context).pop();
             },
           ),
           ListTile(
             title: const Text('Spanish'),
             onTap: () {
-              MyApp.setLocale(context, const Locale('es'));
+              Get.updateLocale(const Locale('es', 'ES'));
               Navigator.of(context).pop();
             },
           ),
           ListTile(
             title: const Text('Arabic'),
             onTap: () {
-              MyApp.setLocale(context, const Locale('ar'));
+              Get.updateLocale(const Locale('ar', 'SA'));
               Navigator.of(context).pop();
             },
           ),
